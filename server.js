@@ -17,10 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/openai', require('./routes/openaiRoutes'));
 
-app.post('/tour-advice', async (req, res) => {
-  const { tourAdvice } = req.body;
-});
-
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
