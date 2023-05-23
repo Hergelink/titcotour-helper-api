@@ -6,11 +6,12 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: process.env.CORS,
+  methods: ['POST'],
+}));
 
 app.use(bodyParser.json());
-
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
